@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint src/*.js src/specs/*.js",
-    "start": "nodemon src/index.js",
+    "lint:fix": "npm run lint -- --fix",
+    "start": "nodemon --experimental-json-modules src/index.js",
     "test": "jest specs --watch",
     "test-ci": "jest specs"
   },
@@ -16,12 +17,18 @@
   "author": "Brian Gershon",
   "license": "MIT",
   "devDependencies": {
-    "@babel/preset-env": "^7.11.5",
-    "babel-jest": "^26.5.2",
-    "eslint": "^7.11.0",
-    "eslint-plugin-jest": "^24.1.0",
-    "jest": "^26.5.3",
-    "nodemon": "^2.0.4"
+    "@babel/preset-env": "^7.16.4",
+    "babel-jest": "^27.4.2",
+    "eslint": "^8.4.1",
+    "eslint-plugin-jest": "^25.3.0",
+    "jest": "^27.4.3",
+    "nodemon": "^2.0.15"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "execa": "^6.0.0",
+    "express": "^4.17.1",
+    "swagger-ui-express": "^3.0.10"
+  }
 }
