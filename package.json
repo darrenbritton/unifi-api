@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint src/*.js src/specs/*.js",
     "lint:fix": "npm run lint -- --fix",
-    "start": "nodemon --experimental-json-modules src/index.js",
+    "start:dev": "nodemon --experimental-json-modules src/index.js",
+    "start": "node --experimental-json-modules src/index.js",
     "test": "jest specs --watch",
     "test-ci": "jest specs"
   },
