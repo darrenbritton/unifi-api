@@ -1,8 +1,7 @@
 name: Continuous Integration
 on: 
   push:
-    paths-ignore:
-      - '**.md'
+    branches: [master]
 
 jobs:
   run:
